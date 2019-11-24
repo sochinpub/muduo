@@ -11,7 +11,8 @@ class copyable
 {
  protected:
   copyable() = default;
-  virtual ~copyable() = default;
+  // virtual会改变对象大小
+  ~copyable() = default;
 };
 
 };
