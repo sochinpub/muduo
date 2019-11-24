@@ -4,15 +4,16 @@
 namespace muduo
 {
 
+// 通过该父类控制子类不可拷贝和赋值构造
 class noncopyable
 {
  protected:
   noncopyable() = default;
-  ~noncopyable() = default;
+  virtual ~noncopyable() = default;
 
  private:
   noncopyable(const noncopyable&) = delete;
-  void operator=(const noncopyable&) = delete;
+  noncopyable operator=(const noncopyable&) = delete;
 };
 
 }

@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 2.6)
 
-# project(muduo C CXX)
-project(muduo VERSION 1.0.0 DESCRIPTION )
+project(muduo C CXX)
 
 enable_testing()
 
@@ -32,7 +31,7 @@ set(CXX_FLAGS
  -rdynamic
  )
  
- # 32位编译
+ # 
 if(CMAKE_BUILD_BITS EQUAL 32)
   list(APPEND CXX_FLAGS "-m32")
 endif()
