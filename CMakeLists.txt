@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 2.6)
 
-project(muduo C CXX)
+# project(muduo C CXX)
+project(muduo VERSION 1.0.0 DESCRIPTION )
 
 enable_testing()
 
@@ -8,6 +9,7 @@ if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE "Release")
 endif()
 
+# 编译选项
 set(CXX_FLAGS
  -g
  # -DVALGRIND
@@ -29,6 +31,8 @@ set(CXX_FLAGS
  -std=c++0x
  -rdynamic
  )
+ 
+ # 32位编译
 if(CMAKE_BUILD_BITS EQUAL 32)
   list(APPEND CXX_FLAGS "-m32")
 endif()
